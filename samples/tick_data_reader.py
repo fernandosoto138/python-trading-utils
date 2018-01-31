@@ -1,4 +1,6 @@
 import definitions as d
+from datetime import datetime
+from Candlestick import Candlestick
 def read_tick_data(file_location, samples_count=-1):
     with open(file_location, 'r') as file:
         count = 0
@@ -27,3 +29,4 @@ if __name__ == '__main__':
     (date, bid, ask) = read_tick_data(d.sample_file, samples_count)
     for i in range(len(date)):
         print(str(date[i])+" Bid: "+str(bid[i])+" Ask: "+str(ask[i]))
+
